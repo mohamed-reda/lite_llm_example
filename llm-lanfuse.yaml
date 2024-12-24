@@ -1,0 +1,16 @@
+model_list:
+  - model_name: "groq-gemma9b"
+    litellm_params:
+      model: "groq/gemma2-9b-it"
+      api_key: "os.environ/GROQ_API_KEY"
+
+  - model_name: "groq-mixtral"
+    litellm_params:
+      model: "groq/mixtral-8x7b-32768"
+      api_key: "os.environ/GROQ_API_KEY"
+
+litellm_settings:
+  drop_params: True
+  success_callback: ["langfuse"]
+  failure_callback: ["langfuse"]
+  redact_user_api_key_info: true

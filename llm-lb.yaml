@@ -1,0 +1,14 @@
+model_list:
+  - model_name: "global-llm"
+    litellm_params:
+      model: "groq/gemma2-9b-it"
+      api_key: "os.environ/GROQ_API_KEY"
+      rpm: 20
+
+  - model_name: "global-llm"
+    litellm_params:
+      model: "groq/mixtral-8x7b-32768"
+      api_key: "os.environ/GROQ_API_KEY"
+      rpm: 20
+
+routing_strategy: simple-shuffle # Literal["simple-shuffle", "least-busy",]
